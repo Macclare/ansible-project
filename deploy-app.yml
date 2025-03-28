@@ -1,0 +1,17 @@
+---
+- name: Deploy web app
+  hosts: node2
+  become: yes
+
+  tasks:
+    - name: Install Git
+      yum:
+        name: git
+        state: present
+
+    - name: Host Application
+      git:
+        repo: "https://github.com/CeeyIT-Solutions/food3.git"
+        dest: /var/www/html/
+
+...
