@@ -8,14 +8,14 @@
       package:
         name: httpd
         state: present
-      when: ansible_distribution == "Amazon"
+      when: ansible_distribution == "Amazon" or ansible_distribution == "CentOs"
 
     - name: Ensure HTTPD is running and enabled on Amazon Linux
       service:
         name: httpd
         state: started
         enabled: yes
-      when: ansible_distribution == "Amazon"
+      when: ansible_distribution == "Amazon" or ansible_distribution == "CentOs"
 
     - name: Update apt cache on Debian-based systems
       apt:
