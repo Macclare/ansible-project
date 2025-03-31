@@ -1,10 +1,10 @@
 ---
-- name: Deploy web app
+- name: Deploy Angular web app
   hosts: n3
   become: yes
 
   roles:
     - apache
-    - html
+    - angular
 
 ...
