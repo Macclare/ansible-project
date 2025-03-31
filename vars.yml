@@ -1,11 +1,11 @@
 ---
+
 - name: Variables Demo
   hosts: g1
   become: yes
   vars:
     myusername: Macclare
 
-  tasks:
   - name: Update Dynamic page
     template:
       src: dynamic.j2
