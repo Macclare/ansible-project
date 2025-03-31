@@ -1,5 +1,5 @@
 ---
-- name: Install  server
+- name: Install http server
   hosts: g1
   become: yes
 
