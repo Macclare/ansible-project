@@ -6,7 +6,7 @@
   tasks:
     - name: update maintenance page
       copy:
-        name: maintenance.html
-        state: /var/www/html/index.html
+        src: maintenance.html
+        dest: /var/www/html/index.html
 
 ...
